@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luigi D'Acunto">
+    <meta name="description" content="Week 6 JS Intro Demo">
+    
+    <title>Week 6 | JS Intro</title>
+
+</head>
+<body>
+    <!--we should have some sort of HTML in the file-->
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+     <!--IN-DOCUMENT JAVASCRIPT-->
+    <!--in-document: lives within the .html (you saw this with CSS)-->
+    <script>
+        //everything must be written in JS between the tags 
+        
+        //decleration of variable - keyword 'var'; vars must be declared before or as they are defined; vars must be defined before they can be used
+        var num //simple declaration
+
+        //declare & assign at once
+        var num1 = 10
+        var num2 = 7
+
+        var sum = num1 + num2
+
+        //OUTPUT -- 2 ways
+
+        //alert() pop-up windows to browser page; user must interact before further code is read
+
+        //` ` denotes a literal string, which makes it much easier to display messages + stored value (similar to using .format()) --> `${VAR}` displays stored of var
+        alert(`The sum of ${num1.toFixed(2)} + ${num2.toFixed(2)} = ${sum.toFixed(2)}`)
+
+        //console.log() -- GREAT FOR TESTING! displays console only, not for regular users 
+        console.log(`The sum of ${num1} + ${num2} = ${sum}`)
+        console.log(`hit line 41`) //mssg only
+        console.log(sum)           //value only 
+
+        //INPUT -- gain data from the user with Javascript ONLY
+        //prompt() -- prompts user for value with message, further lines of code are not read until user hits OK/cancel/Enter key
+        //prompt("Enter your name: ")
+        //store the returned value from prompt()
+
+        var fname = prompt(`Enter your first name: `)
+        console.log(fname)
+
+        //promot() return strings
+        //concatentation -- adding strings together
+        var lname = prompt(`Enter your last name: `)
+        var full = fname + " " + lname 
+
+        alert(`Hi there ${fname}! \n\nYour full name is: ${full}`)
+        //escapes sequences worh within strings "",'',``
+
+        //retruns from promp() are STRINGS meaning you must cast a value Number() if you want to do math with it
+
+        var num = Number(prompt(`Enter a number: `))
+        //num = Number(num) --- cast as number
+        console.log(num)
+
+        //basic if statement in Javascript
+        if(num === 7)
+        {
+            console.log(`num has a number type value of 7`)
+        }
+        else if(num == 7)
+        {
+            console.log(`num has a value of 7 but it is not a number type`)
+        }
+        else 
+        {
+            console.log(`num doesn't have a value of 7`)
+        }
+
+
+    </script>

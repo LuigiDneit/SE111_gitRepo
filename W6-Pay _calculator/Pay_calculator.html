@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luigi D'Acunto">
+    <meta name="description" content="Week 6 JS Intro Demo">
+    
+    <title>Week 6 | Pay Calculator</title>
+
+</head>
+<body>
+    <h1>Week 6 Pay Calculator| Javascript</h1>
+
+    <script>
+       var taxRate = .2
+       var hrlyRate = Number(prompt(`Enter your Hourly Rate: `))
+       var hrsWorked = Number(prompt(`Enter your hours worked: `))
+    
+       var grssPay = hrlyRate * hrsWorked 
+       console.log(grssPay)
+       var taxAmount = grssPay * taxRate
+       console.log(taxAmount)
+       var netPay = grssPay - taxAmount
+       console.log(netPay)
+
+       alert(`Gross Pay: ${grssPay.toFixed(2)} \n Tax Amount: ${taxAmount.toFixed(2)} \n Net Pay: ${netPay.toFixed(2)}`)
+
+
+    </script>
